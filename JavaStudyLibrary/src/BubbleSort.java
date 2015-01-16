@@ -17,7 +17,7 @@ public class BubbleSort {
         
         int key;
         
-        for(int i = A.length - 1; i > 0; i--){
+        for(int i = A.length-1; i < 0; i--){
             key = A[i];
             if(A[i-1] > A[i]){
                 A[i] = A[i-1];
