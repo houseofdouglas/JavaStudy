@@ -9,13 +9,14 @@
  *
  * @author Brandi
  */
-public class InsertSort {
+public class InsertSort implements Sortable{
 
     
     public void InsertSort() {
         
     }
     
+    @Override
     public int[] sort(int[] A){
         
         int[] tempA = new int[A.length];

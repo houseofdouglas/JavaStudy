@@ -10,7 +10,7 @@ import java.util.Arrays;
  *
  * @author Brandi
  */
-public class MergeSort {
+public class MergeSort implements Sortable{
 
     private static Arrays array;
     private static int[] _array;
@@ -19,6 +19,12 @@ public class MergeSort {
 
     }
 
+    /**
+     *
+     * @param A
+     * @return
+     */
+    @Override
     public int[] sort(int[] A) {
         _array = new int[A.length];
         return mergeSort(A);
@@ -47,6 +53,11 @@ public class MergeSort {
 
         int[] tR = new int[r.length + 1];
         int[] tL = new int[l.length + 1];
+        
+        
+        //Set the sentinel to -1 since we are using an array of primitive
+        //integers and nulls are not allowed. The random set is between 0 and
+        //the RANDOM_SET.
         
         tR[r.length] = -1;
         tL[l.length] = -1;

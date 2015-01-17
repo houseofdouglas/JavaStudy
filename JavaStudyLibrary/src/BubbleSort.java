@@ -8,12 +8,13 @@
  *
  * @author Brandi
  */
-public class BubbleSort {
+public class BubbleSort implements Sortable{
 
     public void BubbleSort() {
 
     }
 
+    @Override
     public int[] sort(int[] A) {
 
         int key;
