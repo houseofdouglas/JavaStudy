@@ -19,8 +19,10 @@ import static org.junit.Assert.*;
  */
 public class InsertSortTest {
     
-    private int[] a = new int[100];
-    private int[] b = new int[100];
+    private final int RANDOM_SET = 99; 
+    
+    private final int[] a = new int[RANDOM_SET]; //{3,1,2,0,1,6,5,4};
+    private final int[] b = new int[RANDOM_SET]; //{0,1,1,2,3,4,5,6};
     
     public InsertSortTest() {
     }
@@ -38,11 +40,13 @@ public class InsertSortTest {
         //prep a
         Random rand = new Random();
         for(int i = 0; i < a.length; i++){
-            a[i] = rand.nextInt(99);
+            a[i] = rand.nextInt(RANDOM_SET);
         }
         //prep b
-        System.arraycopy(a, 0, b, 0, 99);
+        System.arraycopy(a, 0, b, 0, RANDOM_SET);
         Arrays.sort(b);
+
+        
     }
     
     @After

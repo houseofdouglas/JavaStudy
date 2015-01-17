@@ -17,24 +17,28 @@ public class InsertSort {
     }
     
     public int[] sort(int[] A){
+        
+        int[] tempA = new int[A.length];
+        
+        System.arraycopy(A,0,tempA,0,A.length);
                 
         int key, j;
         
-        for (int i = 1; i < A.length; i++) {
-            key = A[i];
+        for (int i = 1; i < tempA.length; i++) {
+            key = tempA[i];
             j = i - 1;
             //While your current pointer is less than
             //the previous and the previous position is
             //greater than zero, move the previous value
             //to the next value and then replace the
             //previous with the key
-            while (j >= 0 && A[j] > key) {
-                A[j+1] = A[j];
-                A[j] = key;
+            while (j >= 0 && tempA[j] > key) {
+                tempA[j+1] = tempA[j];
+                tempA[j] = key;
                 j--;
             }
         }
         
-        return A;
+        return tempA;
     }
 }

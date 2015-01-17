@@ -9,22 +9,27 @@
  * @author Brandi
  */
 public class BubbleSort {
-    public void BubbleSort(){
-        
+
+    public void BubbleSort() {
+
     }
-    
-    public int[] sort(int[] A){
-        
+
+    public int[] sort(int[] A) {
+
         int key;
-        
-        for(int i = A.length-1; i < 0; i--){
-            key = A[i];
-            if(A[i-1] > A[i]){
-                A[i] = A[i-1];
-                A[i-1] = key;
+        int[] tempA = new int[A.length];
+        System.arraycopy(A, 0, tempA, 0, A.length);
+
+        for (int i = 0; i < tempA.length; i++) {
+            for (int j = tempA.length - 1; j > i; j--) {
+                if (tempA[j] < tempA[j - 1]) {
+                    key = tempA[j];
+                    tempA[j] = tempA[j - 1];
+                    tempA[j - 1] = key;
+                }
             }
         }
-        
-        return A;
+
+        return tempA;
     }
 }
