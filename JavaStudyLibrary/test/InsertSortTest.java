@@ -5,7 +5,6 @@
  */
 
 import java.util.Arrays;
-import java.util.Date;
 import java.util.Random;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -119,5 +118,15 @@ public class InsertSortTest {
 
         assertEquals(new MergeSort().getClass(), s.getClass());
 
+    }
+    
+    @Test
+    public void maxSubArray(){
+        int[] m = {13,-3,-25,20,-3,-16,-23,18,20,-7,12,-5,-22,15,-4,7};
+        int[] n = {18,20,-7,12};
+        
+        MaximumSubArray msa = new MaximumSubArray(m);
+        
+        assertArrayEquals(n, msa.getMaxSubArray());
     }
 }
